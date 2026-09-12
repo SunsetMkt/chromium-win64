@@ -24,6 +24,7 @@ cmd /q /c python3 chromium\src\out\%~1\UpdaterSigning\sign.py --in_file chromium
   --installer_path chromium\src\out\%~1\mini_installer.exe ^
   --manifest_path %CHROMIUM_DIR%\installer\OfflineManifest.gup ^
   --lzma_7z "C:/Program Files/7-Zip/7z.exe" ^
+  --disable_tag_and_sign ^
   --manifest_dict_replacements "{'${INSTALLER_VERSION}':'%VERSION%', '${ARCH_REQUIREMENT}':'x64'}"
 exit /b
 
